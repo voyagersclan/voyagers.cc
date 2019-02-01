@@ -3,6 +3,12 @@ permalink: /discord/
 ---
 <!doctype html>
 <head>
-<meta http-equiv="refresh" content="0; url=https://discordapp.com/invite/0uTGm3gxS3zPnioK" />
+  <script>
+    var httpReq = new XMLHttpRequest();
+    httpReq.open("GET", "https://discordapp.com/api/guilds/163063881244082178/widget.json", false);
+    httpReq.send(null);
+    var discord_json = JSON.parse(httpReq.responseText);
+    window.location.replace(discord_json.instant_invite);
+  </script>
 </head>
 </html>
